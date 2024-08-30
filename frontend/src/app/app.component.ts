@@ -1,13 +1,24 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './components/partials/header/header.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
+  standalone:true,
+  imports:[RouterOutlet,HeaderComponent,CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'frontend';
+  // isWelcomePage = false;
+
+  // constructor(private router: Router) {
+  //   this.router.events.subscribe(event => {
+  //     if (event instanceof NavigationEnd) {
+  //       // Check if the current route is the welcome page
+  //       this.isWelcomePage = this.router.url === '/';
+  //     }
+  //   });
+  // }
 }

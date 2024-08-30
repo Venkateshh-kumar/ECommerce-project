@@ -1,0 +1,84 @@
+header{
+    position: relative;
+    background: white;
+    padding: 0;
+    border-bottom: 2px solid #e72929;
+  }
+  
+  .user-logo {
+    width: 40px;          /* Set the desired width */
+    height: 30px;         /* Set the desired height */
+    border-radius: 50%;   /* Makes the image circular */
+    object-fit: cover;    /* Ensures the image covers the area without distortion */
+    vertical-align: middle; /* Aligns the image with text if any */
+  }
+  
+  a{
+    color: #af1313;
+    font-size: 1.1rem;
+  }
+  
+  a:hover{
+    background:#e72929;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    
+  }
+  
+  a.logo{
+    font-weight: bold;
+    padding: 1rem;
+  }
+  
+  ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+  }
+  
+  ul a{
+    padding: 1rem;
+    display: inline-block;
+  }
+  
+  a span{
+    background: #ff4d4d;
+    color: white;
+    padding: 0.1rem 0.45rem;
+    border-radius: 100rem;
+    font-size:0.9rem;
+  }
+
+  a.routerLink{
+    font-size: 30px;
+  }
+  
+  .menu-container{
+    position: relative;
+  }
+  
+  .menu{
+    position:absolute;
+    z-index:1;
+    background:whitesmoke;
+    display: none;
+  }
+  
+  .menu-container:hover .menu{     
+    /* when you are hovering on dashboard named as venky, then display: block; makes the .menu element a block-level element, meaning it will take up the full width available, and it will be visible.  */
+    display: block;
+  }
+  
+  .menu a{
+    width: 100%;
+    min-width:8rem;
+  }
+  

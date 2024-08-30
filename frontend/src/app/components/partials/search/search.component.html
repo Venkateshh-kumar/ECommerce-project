@@ -1,0 +1,14 @@
+<div>
+    <input #s type="text" placeholder="Search food items" (keyup.enter)="search(s.value)" [value]="searchTerm"> 
+    
+    <button id="btn1" (click)="search(s.value)">Search</button> 
+  </div>
+  
+  <div id="notfound" *ngIf="!productFound">
+   <b>Items not Found</b>
+  </div>
+
+  <div class="gohome" *ngIf="!productFound">
+    <button (click)="gotoo()">Go To Homepage</button>  
+  </div>
+  

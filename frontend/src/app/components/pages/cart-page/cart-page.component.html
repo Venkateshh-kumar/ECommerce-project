@@ -1,0 +1,53 @@
+<div *ngIf="cart && cart.items.length else emptyCartMessage" class="container">
+<ul>
+  <li *ngFor="let cartItem of cart.items">
+    <div>
+      <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
+    </div>
+    <div>
+      <a routerLink="/food/{{cartItem.food.id}}">
+        {{cartItem.food.name}}
+      </a>
+    </div>
+    <div class="quantity-container">
+      <button class="quantity-btn" (click)="decreaseQuantity(cartItem)" [disabled]="cartItem.quantity <= 1">-</button>
+      <span class="quantity-number">{{ cartItem.quantity }}</span>
+      <button class="quantity-btn" (click)="increaseQuantity(cartItem)">+</button>
+    </div>
+    
+    
+    <div>
+      {{cartItem.price | currency:'INR'}}
+    </div>
+
+    <div>
+      <button class="remove-button" (click)="removeFromCart(cartItem)">
+        Remove
+      </button>
+    </div>
+  </li>
+</ul>
+
+
+
+<div class="checkout">
+  <div>
+    <div class="foods-count">{{cart.totalCount}}</div>
+    <!-- <div class="foods-count"> Total Products: {{cart.totalCount}}</div>     -->
+    <!-- we can use 'Total Products' to show the number of product but we can use content also in css to give anything at that place -->
+    
+    <div class="total-price">{{cart.totalPrice| currency:'INR'}}</div>
+  </div>
+
+  <a routerLink="/checkout">Proceed to Checkout</a>
+</div>
+</div>
+
+<ng-template #emptyCartMessage>
+    <div class="empty-cart-message">
+      Your cart is empty.
+    </div>
+    <div>
+        <button (click)="goto()">Go to Homepage</button>
+    </div>
+  </ng-template>

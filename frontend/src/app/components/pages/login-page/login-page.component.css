@@ -1,0 +1,86 @@
+/* Styles for the login container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.details {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+#login-heading {
+  text-align: center;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  margin-bottom: 15px;
+}
+
+.input-container label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button {
+  text-align: center;
+}
+
+.button button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button button:hover {
+  background-color: #0056b3;
+}
+
+.error-list {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.register{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive design for mobile view */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .details {
+    padding: 20px;
+  }
+
+  .button button {
+    width: 100%;
+    padding: 12px;
+  }
+}

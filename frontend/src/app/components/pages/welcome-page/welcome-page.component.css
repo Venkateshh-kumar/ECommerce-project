@@ -1,0 +1,179 @@
+/* Base styles */
+.welcome-background {
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1556742031-c6961e8560b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGZvb2R8ZW58MHx8fHwxNjI2NzcxMjQz&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center;
+  background-size: cover;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  color: white;
+  padding: 10px 20px;
+  position: relative; /* Position relative for potential positioning of child elements */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding in the element's total width */
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.logo p {
+  font-size: 14px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 35px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.welcome-content {
+  text-align:left;
+  color: rgb(189, 69, 5);
+  padding: 40px 20px;
+}
+
+.food-images {
+  display: flex;
+  gap: 0px; /* Adjust spacing between images */
+  flex-wrap: wrap; /* Allows images to wrap to next line */
+  justify-content: center; /* Center images horizontally */
+}
+
+.food-images img {
+  width: 300px; /* Adjust size as needed */
+  height: 300px; /* Adjust size as needed */
+  object-fit: cover; /* Ensures the image covers the area */
+  margin: 25px; /* Spacing around each image */
+  transition: transform 0.3s ease, border-radius 0.3s ease; /* Smooth transition for effects */
+}
+
+.food-images img:nth-child(1) {
+  border-radius: 50%; /* Circular image */
+}
+
+.food-images img:nth-child(2) {
+  transform: rotate(-10deg); /* Tilted image */
+}
+
+.food-images img:nth-child(3) {
+  transform: rotate(10deg); /* Tilted image */
+}
+
+.cta-button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+/* Footer styles */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 150px; /* Adjust size as needed */
+  margin-bottom: 15px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.social-icon img {
+  width: 30px; /* Adjust size as needed */
+  transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+  transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  .food-images img {
+    width: 80px; /* Adjust size for smaller screens */
+    height: 80px;
+  }
+
+  .cta-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo h1 {
+    font-size: 20px;
+  }
+
+  .logo p {
+    font-size: 12px;
+  }
+
+  .food-images img {
+    width: 60px; /* Further adjust size for very small screens */
+    height: 60px;
+  }
+
+  .cta-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}

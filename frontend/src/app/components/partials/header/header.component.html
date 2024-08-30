@@ -1,0 +1,25 @@
+<div class="container">
+    <a class="routerLink" routerLink="/home"><b>FoodManiaa</b></a>
+    <nav>
+        <ul>
+            <li>
+                <a routerLink="/login">Login</a>
+            </li>
+            <li class="menu-container">                   
+                <!-- this is same as nav items in the list -->
+                <a routerLink="/dashboard">
+                  <img src="assets/profile.png" alt="User Logo" class="user-logo" />
+                </a>
+                <div class="menu">                        
+                    <!-- so the menu is the dropdown content -->
+                    <a routerLink = "/profile">Profile</a>
+                    <a routerLink = "/orders">Orders</a>
+                    <a>Logout</a>
+                </div>
+            </li>
+            <li>
+                <a routerLink = "/cart-page">Cart<span>2</span></a>
+            </li>
+        </ul>
+    </nav>
+</div>

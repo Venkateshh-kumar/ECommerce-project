@@ -7,28 +7,28 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
-          "skipTests": true
+          "skipTests": false
         },
         "@schematics/angular:component": {
-          "skipTests": true
+          "skipTests": false
         },
         "@schematics/angular:directive": {
-          "skipTests": true
+          "skipTests": false
         },
         "@schematics/angular:guard": {
-          "skipTests": true
+          "skipTests": false
         },
         "@schematics/angular:interceptor": {
-          "skipTests": true
+          "skipTests": false
         },
         "@schematics/angular:pipe": {
-          "skipTests": true
+          "skipTests": false
         },
         "@schematics/angular:resolver": {
-          "skipTests": true
+          "skipTests": false
         },
         "@schematics/angular:service": {
-          "skipTests": true
+          "skipTests": false
         }
       },
       "root": "",
@@ -46,13 +46,12 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           },
@@ -103,11 +102,9 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+           "assets": [
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
